@@ -59,3 +59,12 @@ var Game = (function() {
 
   return {Game : Game};
 }());
+// ✅ Auto-clicker: waits until everything loads before clicking
+window.addEventListener("load", function () {
+  const clickLoop = setInterval(() => {
+    const detector = document.getElementById("detector-events");
+    if (detector) {
+      detector.click();
+    }
+  }, 10);
+});
