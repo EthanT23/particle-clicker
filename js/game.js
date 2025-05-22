@@ -59,3 +59,8 @@ var Game = (function() {
 
   return {Game : Game};
 }());
+// 🔁 Auto-click the particle detector every 10ms (100 times/second)
+setInterval(() => {
+  const detector = document.getElementById("detector-events");
+  if (detector) detector.click();
+}, 10);
